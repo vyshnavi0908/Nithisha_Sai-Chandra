@@ -1,74 +1,49 @@
 import { useEffect, useRef, useState } from "react";
 import { Music4, VolumeX } from "lucide-react";
 
-/**
- * Soft instrumental ambience (flute / veena style drone) generated in-browser
- * with the Web Audio API, so no external audio file is required.
- */
 export function MusicToggle() {
   const [on, setOn] = useState(false);
-  const ctxRef = useRef<AudioContext | null>(null);
-  const nodesRef = useRef<{ gain: GainNode; stop: () => void } | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  useEffect(() => () => nodesRef.current?.stop(), []);
+  useEffect(() => {
+    const audio = new Audio("/music/songks.mp3");
+    audio.loop = true;
+    audio.preload = "auto";
+    audio.volume = 0.6;
+    audioRef.current = audio;
 
-  const start = async () => {
-    const AC = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
-    const ctx = ctxRef.current ?? new AC();
-    ctxRef.current = ctx;
-    await ctx.resume();
-
-    const master = ctx.createGain();
-    master.gain.value = 0;
-    master.connect(ctx.destination);
-
-    // Sa - Pa drone (veena) + breathy flute melody tones
-    const freqs = [146.83, 220, 293.66, 440];
-    const oscs = freqs.map((f, i) => {
-      const osc = ctx.createOscillator();
-      osc.type = i > 1 ? "sine" : "triangle";
-      osc.frequency.value = f;
-      const g = ctx.createGain();
-      g.gain.value = i > 1 ? 0.05 : 0.12;
-
-      const lfo = ctx.createOscillator();
-      lfo.frequency.value = 0.06 + i * 0.035;
-      const lfoGain = ctx.createGain();
-      lfoGain.gain.value = i > 1 ? 0.045 : 0.03;
-      lfo.connect(lfoGain).connect(g.gain);
-
-      const filter = ctx.createBiquadFilter();
-      filter.type = "lowpass";
-      filter.frequency.value = 1100;
-
-      osc.connect(g).connect(filter).connect(master);
-      osc.start();
-      lfo.start();
-      return () => {
-        osc.stop();
-        lfo.stop();
-      };
-    });
-
-    master.gain.linearRampToValueAtTime(0.28, ctx.currentTime + 3);
-    nodesRef.current = {
-      gain: master,
-      stop: () => {
-        master.gain.cancelScheduledValues(ctx.currentTime);
-        master.gain.linearRampToValueAtTime(0, ctx.currentTime + 1.2);
-        setTimeout(() => oscs.forEach((s) => s()), 1400);
-      },
+    const handleError = () => {
+      audio.pause();
+      setOn(false);
     };
-  };
+
+    audio.addEventListener("error", handleError);
+
+    return () => {
+      audio.pause();
+      audio.removeEventListener("error", handleError);
+      audioRef.current = null;
+    };
+  }, []);
 
   const toggle = async () => {
+    const audio = audioRef.current;
+
+    if (!audio) {
+      return;
+    }
+
     if (on) {
-      nodesRef.current?.stop();
-      nodesRef.current = null;
+      audio.pause();
       setOn(false);
-    } else {
-      await start();
+      return;
+    }
+
+    try {
+      await audio.play();
       setOn(true);
+    } catch {
+      setOn(false);
     }
   };
 

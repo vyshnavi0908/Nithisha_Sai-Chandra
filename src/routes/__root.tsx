@@ -79,24 +79,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Nithisha & Sai Chandra · Wedding Invitation | 17 Aug 2026" },
+      { title: "Nithisha & Sai Chand · Wedding Invitation | 17 Aug 2026" },
       {
         name: "description",
         content:
-          "With the blessings of our families, Nithisha weds Sai Chandra. Reception 16 August, Muhurtham 17 August 2026 at Sri Balaji Kalyana Mandapam, Tiruchanoor.",
+          "With the blessings of our families, Nithisha weds Sai Chand. Reception 16 August, Marriage 17 August 2026 at Sri Balaji Kalyana Mandapam, Tiruchanoor.",
       },
       { name: "author", content: "Chintala & Koppolu Families" },
-      { property: "og:title", content: "Nithisha & Sai Chandra · Wedding Invitation | 17 Aug 2026" },
+      { property: "og:title", content: "Nithisha & Sai Chand · Wedding Invitation | 17 Aug 2026" },
       {
         property: "og:description",
-        content: "With the blessings of our families, Nithisha weds Sai Chandra. Reception 16 August, Muhurtham 17 August 2026 at Sri Balaji Kalyana Mandapam, Tiruchanoor.",
+        content: "With the blessings of our families, Nithisha weds Sai Chand. Reception 16 August, Marriage 17 August 2026 at Sri Balaji Kalyana Mandapam, Tiruchanoor.",
       },
 
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Nithisha & Sai Chandra · Wedding Invitation | 17 Aug 2026" },
-      { name: "twitter:description", content: "With the blessings of our families, Nithisha weds Sai Chandra. Reception 16 August, Muhurtham 17 August 2026 at Sri Balaji Kalyana Mandapam, Tiruchanoor." },
+      { name: "twitter:title", content: "Nithisha & Sai Chand · Wedding Invitation | 17 Aug 2026" },
+      { name: "twitter:description", content: "With the blessings of our families, Nithisha weds Sai Chand. Reception 16 August, Marriage 17 August 2026 at Sri Balaji Kalyana Mandapam, Tiruchanoor." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/29d38fc2-7494-49c3-88f9-4d2c5d5cf1a6/id-preview-d546c69e--1a358210-2eb4-4bd9-b478-60b014595e94.lovable.app-1785916853303.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/29d38fc2-7494-49c3-88f9-4d2c5d5cf1a6/id-preview-d546c69e--1a358210-2eb4-4bd9-b478-60b014595e94.lovable.app-1785916853303.png" },
     ],

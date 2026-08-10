@@ -28,17 +28,17 @@ import g6 from "@/assets/g6.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nithisha & Sai Chandra · Wedding Invitation | 17 Aug 2026" },
+      { title: "Nithisha & Sai Chand · Wedding Invitation | 17 Aug 2026" },
       {
         name: "description",
         content:
-          "With the blessings of our families, Nithisha weds Sai Chandra. Reception 16 August, Muhurtham 17 August 2026 at Sri Balaji Kalyana Mandapam, Tiruchanoor.",
+          "With the blessings of our families, Nithisha weds Sai Chand. Reception 16 August, Marriage 17 August 2026 at Sri Balaji Kalyana Mandapam, Tiruchanoor.",
       },
-      { property: "og:title", content: "Nithisha & Sai Chandra · Wedding Invitation | 17 Aug 2026" },
+      { property: "og:title", content: "Nithisha & Sai Chand · Wedding Invitation | 17 Aug 2026" },
       {
         property: "og:description",
         content:
-          "With the blessings of our families, Nithisha weds Sai Chandra. Reception 16 August, Muhurtham 17 August 2026 at Sri Balaji Kalyana Mandapam, Tiruchanoor.",
+          "With the blessings of our families, Nithisha weds Sai Chand. Reception 16 August, Marriage 17 August 2026 at Sri Balaji Kalyana Mandapam, Tiruchanoor.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -48,11 +48,10 @@ export const Route = createFileRoute("/")({
 });
 
 const events = [
-  { name: "Haldi", date: "Saturday, 15 August 2026", time: "9:00 AM", note: "Turmeric blessings for the bride & groom at home." },
-  { name: "Mehendi", date: "Saturday, 15 August 2026", time: "4:00 PM", note: "Henna, jasmine and songs with the ladies of the family." },
-  { name: "Sangeet", date: "Saturday, 15 August 2026", time: "8:00 PM", note: "An evening of music, dance and celebration." },
-  { name: "Reception", date: "Sunday, 16 August 2026", time: "7:00 PM onwards", note: "Blessings and dinner at Sri Balaji Kalyana Mandapam." },
-  { name: "Muhurtham", date: "Monday, 17 August 2026", time: "12:21 AM – 12:33 AM", note: "The auspicious wedding ceremony. Your presence is our blessing." },
+  { name: "Mehandi", date: "13th Aug 2026", time: "", note: "A joyful gathering of family and festive henna traditions." },
+  { name: "Haldi, Nalugu", date: "14th Aug 2026", time: "", note: "A fragrant celebration with blessings, turmeric, and togetherness." },
+  { name: "Reception", date: "16th Aug 2026", time: "7:00 PM onwards", note: "Blessings and dinner at Sri Balaji Kalyana Mandapam." },
+  { name: "Subh Muhurtham", date: "17th Aug 2026", time: "12:21 AM to 12:33 AM", note: "The auspicious wedding ceremony. Your presence is our blessing." },
 ];
 
 
@@ -120,7 +119,7 @@ function Invitation() {
                 <span className="rule-gold h-px w-10 sm:w-20" />
               </span>
               <h1 className="font-script text-[2.6rem] leading-[1.05] text-gold sm:text-7xl lg:text-8xl">
-                Sai Chandra
+                Sai Chand
               </h1>
 
               <p className="mt-10 font-display text-sm tracking-[0.32em] text-primary uppercase sm:text-lg">
@@ -191,7 +190,7 @@ function Invitation() {
             },
             {
               role: "The Groom",
-              name: "Sai Chandra",
+              name: "Sai Chand",
               img: g4,
               parents: family[1]!.members,
               place: "Garladinne Mandal",
@@ -416,7 +415,7 @@ function Invitation() {
           <div className="relative z-10">
             <span className="flame-flicker inline-block font-display text-5xl text-gold">ॐ</span>
             <h2 className="mt-6 font-script text-4xl text-gold sm:text-6xl">
-              Nithisha <span className="text-primary">❤</span> Sai Chandra
+              Nithisha <span className="text-primary">❤</span> Sai Chand
             </h2>
             <Divider label="Thank You" />
             <p className="mx-auto max-w-lg font-lora text-sm italic leading-relaxed text-brown/85">
