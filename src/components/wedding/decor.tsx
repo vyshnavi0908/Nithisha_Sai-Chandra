@@ -70,18 +70,18 @@ export function Reveal({
 /* -------- ornamental divider: mandala flanked by gold rules -------- */
 export function Divider({ label }: { label?: string }) {
   return (
-    <div className="flex items-center justify-center gap-4 py-2">
-      <span className="rule-gold h-px w-16 opacity-70 sm:w-28" />
+    <div className="flex items-center justify-center gap-2 py-2 sm:gap-4">
+      <span className="rule-gold h-px w-10 opacity-70 sm:w-28" />
       <span className="rule-gold h-1.5 w-1.5 rotate-45" />
       {label ? (
-        <span className="font-display text-[0.6rem] tracking-[0.42em] text-gold uppercase sm:text-xs">
+        <span className="font-display text-[0.55rem] tracking-[0.34em] text-gold uppercase sm:text-xs">
           {label}
         </span>
       ) : (
-        <img src={mandala} alt="" width={40} height={40} loading="lazy" className="h-10 w-10 opacity-80" />
+        <img src={mandala} alt="" width={40} height={40} loading="lazy" className="h-8 w-8 opacity-80 sm:h-10 sm:w-10" />
       )}
       <span className="rule-gold h-1.5 w-1.5 rotate-45" />
-      <span className="rule-gold h-px w-16 opacity-70 sm:w-28" />
+      <span className="rule-gold h-px w-10 opacity-70 sm:w-28" />
     </div>
   );
 }
@@ -181,23 +181,23 @@ export function InvitePage({
   className?: string;
 }) {
   return (
-    <section id={id} className="relative px-3 py-10 sm:px-6 sm:py-16">
+    <section id={id} className="relative px-2 py-3 sm:px-6 sm:py-6">
       <div
-        className={`frame-page paper-grain relative mx-auto max-w-6xl overflow-hidden bg-card/70 px-4 py-14 sm:px-10 sm:py-20 lg:px-16 ${className}`}
+        className={`frame-page paper-grain relative mx-auto max-w-6xl overflow-hidden bg-card/70 px-3 py-6 sm:px-8 sm:py-8 lg:px-12 ${className}`}
       >
         <MandalaWash />
         <div className="relative z-10">
           {(kicker || title) && (
-            <Reveal className="mb-10 text-center sm:mb-14">
+            <Reveal className="mb-3 text-center sm:mb-4">
               {kicker && (
                 <p className="font-body text-[0.6rem] tracking-[0.5em] text-primary/70 uppercase sm:text-xs">
                   {kicker}
                 </p>
               )}
               {title && (
-                <h2 className="mt-3 font-display text-2xl text-gold sm:text-4xl">{title}</h2>
+                <h2 className="mt-2 font-display text-2xl text-gold sm:mt-3 sm:text-4xl">{title}</h2>
               )}
-              <div className="mt-5">
+              <div className="mt-2 sm:mt-3">
                 <Divider />
               </div>
             </Reveal>

@@ -9,7 +9,6 @@ import {
   LotusCorners,
   MandalaWash,
   Reveal,
-  Toran,
 } from "@/components/wedding/decor";
 import { Nav } from "@/components/wedding/nav";
 import { Countdown } from "@/components/wedding/countdown";
@@ -48,10 +47,38 @@ export const Route = createFileRoute("/")({
 });
 
 const events = [
-  { name: "Mehandi", date: "13th Aug 2026", time: "", note: "A joyful gathering of family and festive henna traditions." },
-  { name: "Haldi, Nalugu", date: "14th Aug 2026", time: "", note: "A fragrant celebration with blessings, turmeric, and togetherness." },
-  { name: "Reception", date: "16th Aug 2026", time: "7:00 PM onwards", note: "Blessings and dinner at Sri Balaji Kalyana Mandapam." },
-  { name: "Subh Muhurtham", date: "17th Aug 2026", time: "12:21 AM to 12:33 AM", note: "The auspicious wedding ceremony. Your presence is our blessing." },
+  {
+    name: "Mehandi",
+    date: "13th Aug 2026",
+    time: "",
+    note: "A joyful gathering of family and festive henna traditions.",
+    image:
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    name: "Haldi, Nalugu",
+    date: "14th Aug 2026",
+    time: "",
+    note: "A fragrant celebration with blessings, turmeric, and togetherness.",
+    image:
+      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    name: "Reception",
+    date: "16th Aug 2026",
+    time: "7:00 PM onwards",
+    note: "Blessings and dinner at Sri Balaji Kalyana Mandapam.",
+    image:
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    name: "Subh Muhurtham",
+    date: "17th Aug 2026",
+    time: "12:21 AM to 12:33 AM",
+    note: "The auspicious wedding ceremony. Your presence is our blessing.",
+    image:
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80",
+  },
 ];
 
 
@@ -70,17 +97,13 @@ function Invitation() {
       <Nav />
 
       {/* ------------------------------ HERO ------------------------------ */}
-      <section id="home" className="relative px-3 pb-10 pt-4 sm:px-6 sm:pb-16">
-        <div className="frame-page paper-grain relative mx-auto max-w-6xl overflow-hidden bg-card/70 px-4 pb-20 pt-24 text-center sm:px-10 sm:pb-28 sm:pt-32">
+      <section id="home" className="relative px-2 pb-4 pt-2 sm:px-6 sm:pb-10 sm:pt-3">
+        <div className="frame-page paper-grain relative mx-auto max-w-6xl overflow-hidden bg-card/70 px-3 pb-10 pt-14 text-center sm:px-8 sm:pb-16 sm:pt-20">
           <MandalaWash />
           <HangingLamps className="px-2 sm:px-8" />
           <LotusCorners />
 
           <div className="relative z-10">
-            <Reveal>
-              <Toran className="mb-2 max-w-md sm:max-w-xl" />
-            </Reveal>
-
             <Reveal zoom className="relative mx-auto max-w-xl">
               <img
                 src={arch}
@@ -100,43 +123,43 @@ function Invitation() {
             </Reveal>
 
             <Reveal delay={150}>
-              <p className="font-script text-2xl text-gold sm:text-4xl">Om Shree Ganeshay Namah</p>
-              <div className="mt-6">
+              <p className="text-fade-up font-script text-xl text-gold sm:text-4xl">Om Shree Ganeshay Namah</p>
+              <div className="mt-0.5 sm:mt-1">
                 <Divider label="Wedding Invitation" />
               </div>
             </Reveal>
 
-            <Reveal delay={300} className="mt-10">
+            <Reveal delay={300} className="mt-2 sm:mt-3">
               <p className="font-lora text-[0.7rem] tracking-[0.4em] text-primary/70 uppercase sm:text-xs">
                 Together with their families
               </p>
-              <h1 className="mt-6 font-script text-[2.6rem] leading-[1.05] text-gold sm:text-7xl lg:text-8xl">
+              <h1 className="text-fade-up mt-1 font-script text-[2rem] leading-[1.02] text-gold sm:mt-2 sm:text-7xl lg:text-8xl">
                 Nithisha
               </h1>
-              <span className="my-3 inline-flex items-center gap-3 sm:my-5">
+              <span className="my-1.5 inline-flex items-center gap-3 sm:my-2">
                 <span className="rule-gold h-px w-10 sm:w-20" />
                 <Heart className="h-5 w-5 fill-primary text-primary" />
                 <span className="rule-gold h-px w-10 sm:w-20" />
               </span>
-              <h1 className="font-script text-[2.6rem] leading-[1.05] text-gold sm:text-7xl lg:text-8xl">
+              <h1 className="text-fade-up-delayed font-script text-[2rem] leading-[1.02] text-gold sm:text-7xl lg:text-8xl">
                 Sai Chand
               </h1>
 
-              <p className="mt-10 font-display text-sm tracking-[0.32em] text-primary uppercase sm:text-lg">
+              <p className="mt-3 font-display text-[0.74rem] tracking-[0.24em] text-primary uppercase sm:mt-4 sm:text-lg sm:tracking-[0.32em]">
                 Monday · 17 August 2026
               </p>
-              <p className="mt-2 font-body text-xs tracking-[0.2em] text-muted-foreground uppercase">
+              <p className="mt-0.5 font-body text-[0.65rem] tracking-[0.18em] text-muted-foreground uppercase sm:text-xs sm:tracking-[0.2em]">
                 Muhurtham 12:21 AM – 12:33 AM
               </p>
 
-              <p className="mx-auto mt-10 max-w-xl font-lora text-sm italic leading-relaxed text-brown/90 sm:text-base">
+              <p className="mx-auto mt-3 max-w-xl px-2 font-lora text-sm italic leading-relaxed text-brown/90 sm:mt-4 sm:px-0 sm:text-base">
                 “Two lamps, one flame. Two families, one blessing. May this bond, lit before the
                 gods, burn gently for a hundred years.”
               </p>
 
               <a
                 href="#save-the-date"
-                className="glow-gold mt-10 inline-flex items-center gap-3 border border-accent bg-primary px-8 py-4 font-display text-[0.6rem] tracking-[0.4em] text-primary-foreground uppercase transition-transform hover:scale-[1.03] sm:text-xs"
+                className="glow-gold mt-3 inline-flex items-center justify-center gap-3 border border-accent bg-primary px-6 py-3 font-display text-[0.56rem] tracking-[0.28em] text-primary-foreground uppercase transition-all duration-500 hover:-translate-y-1 hover:scale-[1.03] sm:mt-4 sm:px-8 sm:py-4 sm:text-xs sm:tracking-[0.4em]"
               >
                 Enter Celebration
               </a>
@@ -147,7 +170,7 @@ function Invitation() {
 
       {/* -------------------------- SAVE THE DATE -------------------------- */}
       <InvitePage id="save-the-date" kicker="Save the Date" title="Mangalyam Muhurtham">
-        <div className="flex flex-col items-center gap-14">
+        <div className="flex flex-col items-center gap-3 sm:gap-4">
           <Reveal zoom className="relative">
             <img
               src={mandala}
@@ -158,13 +181,13 @@ function Invitation() {
               loading="lazy"
               className="spin-slow w-72 opacity-45 sm:w-96"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <span className="font-body text-[0.55rem] tracking-[0.42em] text-primary/70 uppercase">
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 sm:gap-1.5">
+              <span className="font-body text-[0.5rem] tracking-[0.38em] text-primary/70 uppercase sm:text-[0.55rem]">
                 August
               </span>
-              <span className="font-display text-6xl text-gold sm:text-7xl">17</span>
-              <span className="rule-gold my-2 h-px w-16" />
-              <span className="font-body text-[0.55rem] tracking-[0.42em] text-primary/70 uppercase">
+              <span className="font-display text-5xl leading-none text-gold sm:text-7xl">17</span>
+              <span className="rule-gold my-1 h-px w-12 sm:my-1.5 sm:w-16" />
+              <span className="font-body text-[0.5rem] tracking-[0.38em] text-primary/70 uppercase sm:text-[0.55rem]">
                 Monday · 2026
               </span>
             </div>
@@ -178,7 +201,7 @@ function Invitation() {
 
       {/* ------------------------------ COUPLE ------------------------------ */}
       <InvitePage id="couple" kicker="The Couple" title="Vadhu & Varudu">
-        <div className="grid gap-10 lg:grid-cols-2">
+        <div className="grid gap-6 sm:gap-10 lg:grid-cols-2">
           {[
             {
               role: "The Bride",
@@ -198,7 +221,7 @@ function Invitation() {
             },
           ].map((p, i) => (
             <Reveal key={p.name} delay={i * 160}>
-              <article className="card-invite paper-grain h-full px-6 py-10 text-center sm:px-10">
+              <article className="card-invite paper-grain h-full px-4 py-8 text-center transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(155,107,29,0.16)] sm:px-10 sm:py-10">
                 <span className="font-body text-[0.55rem] tracking-[0.44em] text-primary/70 uppercase">
                   {p.role}
                 </span>
@@ -233,7 +256,7 @@ function Invitation() {
                   />
                 </div>
 
-                <h3 className="mt-10 font-script text-4xl text-gold sm:text-5xl">{p.name}</h3>
+                <h3 className="mt-8 font-script text-[2.1rem] text-gold sm:mt-10 sm:text-5xl">{p.name}</h3>
                 <Divider />
                 <p className="font-body text-[0.55rem] tracking-[0.4em] text-primary/70 uppercase">
                   {p.role === "The Bride" ? "Daughter of" : "Son of"}
@@ -259,10 +282,17 @@ function Invitation() {
 
       {/* ------------------------------ EVENTS ------------------------------ */}
       <InvitePage id="events" kicker="Ceremonies" title="Shubh Karyam">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
           {events.map((ev, i) => (
             <Reveal key={ev.name} delay={i * 110}>
-              <article className="card-invite paper-grain relative h-full overflow-hidden px-6 py-10 text-center">
+              <article
+                className="card-invite paper-grain group relative h-full overflow-hidden px-4 py-8 text-center transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(155,107,29,0.16)] sm:px-6 sm:py-10"
+                style={{
+                  backgroundImage: `linear-gradient(135deg, rgba(255,248,232,0.96), rgba(255,240,214,0.9)), url(${ev.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
                 <img
                   src={lotus}
                   alt=""
@@ -281,7 +311,7 @@ function Invitation() {
                   loading="lazy"
                   className="pointer-events-none absolute -bottom-6 -right-8 w-24 -scale-x-100 opacity-60"
                 />
-                <div className="relative z-10">
+                <div className="relative z-10 transition-transform duration-500 group-hover:scale-[1.01]">
                   <img
                     src={mandala}
                     alt=""
@@ -291,7 +321,7 @@ function Invitation() {
                     loading="lazy"
                     className="mx-auto w-14 opacity-80"
                   />
-                  <h3 className="mt-4 font-script text-3xl text-gold">{ev.name}</h3>
+                  <h3 className="mt-4 font-script text-[1.8rem] text-gold sm:text-3xl">{ev.name}</h3>
                   <Divider />
                   <p className="font-body text-[0.62rem] tracking-[0.28em] text-primary uppercase">
                     {ev.date}
@@ -311,7 +341,7 @@ function Invitation() {
 
       {/* ------------------------------ GALLERY ------------------------------ */}
       <InvitePage id="gallery" kicker="Gallery" title="Moments & Motifs">
-        <div className="columns-2 gap-5 lg:columns-3 [&>*]:mb-5">
+        <div className="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
           {gallery.map((src, i) => (
             <Reveal key={i} delay={(i % 3) * 120} zoom>
               <figure className="group card-invite overflow-hidden p-2">
@@ -363,7 +393,7 @@ function Invitation() {
                 title="Map to Sri Balaji Kalyana Mandapam, Tiruchanoor"
                 src="https://www.google.com/maps?q=Tiruchanoor%2C%20Andhra%20Pradesh%20517503&output=embed"
                 loading="lazy"
-                className="h-64 w-full"
+                className="h-56 w-full sm:h-64"
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
@@ -384,7 +414,7 @@ function Invitation() {
         <div className="grid gap-10 sm:grid-cols-2">
           {family.map((f, i) => (
             <Reveal key={f.side} delay={i * 150}>
-              <article className="card-invite paper-grain px-6 py-10 text-center">
+              <article className="card-invite paper-grain px-4 py-8 text-center sm:px-6 sm:py-10">
                 <span className="font-body text-[0.55rem] tracking-[0.44em] text-primary/70 uppercase">
                   {f.side}
                 </span>
@@ -408,20 +438,22 @@ function Invitation() {
 
  
       {/* ------------------------------ FOOTER ------------------------------ */}
-      <footer className="relative px-3 pb-12 sm:px-6">
-        <div className="frame-page paper-grain relative overflow-hidden mx-auto max-w-6xl bg-card/70 px-6 py-20 text-center">
+      <footer className="relative px-2 pb-8 sm:px-6 sm:pb-10">
+        <div className="frame-page paper-grain relative mx-auto max-w-6xl overflow-hidden bg-card/70 px-4 py-10 text-center sm:px-6 sm:py-14">
           <MandalaWash />
           <LotusCorners />
           <div className="relative z-10">
-            <span className="flame-flicker inline-block font-display text-5xl text-gold">ॐ</span>
-            <h2 className="mt-6 font-script text-4xl text-gold sm:text-6xl">
-              Nithisha <span className="text-primary">❤</span> Sai Chand
+            <span className="flame-flicker inline-block font-display text-4xl text-gold sm:text-5xl">ॐ</span>
+            <h2 className="mt-4 flex flex-wrap items-center justify-center gap-2 font-script text-[1.5rem] text-gold sm:mt-6 sm:gap-3 sm:text-6xl">
+              <span className="whitespace-nowrap">Nithisha</span>
+              <span className="heart-beat inline-flex items-center text-primary">❤</span>
+              <span className="whitespace-nowrap">Sai Chand</span>
             </h2>
             <Divider label="Thank You" />
             <p className="mx-auto max-w-lg font-lora text-sm italic leading-relaxed text-brown/85">
               Your blessings are the truest ornament of this wedding. We await you at Tiruchanoor.
             </p>
-            <p className="mt-8 font-body text-[0.55rem] tracking-[0.4em] text-primary/60 uppercase">
+            <p className="mt-6 font-body text-[0.5rem] tracking-[0.34em] text-primary/60 uppercase sm:mt-8 sm:text-[0.55rem] sm:tracking-[0.4em]">
               Sathamanam Bhavati · 17 August 2026
             </p>
           </div>
