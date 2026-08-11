@@ -29,8 +29,8 @@ export function Nav() {
         solid ? "bg-background/85 shadow-[0_1px_0_0_var(--gold)] backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-8">
-        <a href="#home" className="font-script text-2xl text-gold sm:text-3xl">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-3 py-3 sm:px-8">
+        <a href="#home" className="font-script text-[1.55rem] text-gold sm:text-3xl">
           N&nbsp;&amp;&nbsp;S
         </a>
 
@@ -60,7 +60,7 @@ export function Nav() {
       </nav>
 
       {open && (
-        <ul className="animate-fade-in border-t border-accent/40 bg-background/95 px-6 pb-6 pt-2 backdrop-blur lg:hidden">
+        <ul className="animate-fade-in max-h-[70vh] overflow-auto border-t border-accent/40 bg-background/95 px-4 pb-6 pt-2 backdrop-blur lg:hidden">
           {links.map(([label, href]) => (
             <li key={href} className="border-b border-accent/20 last:border-0">
               <a

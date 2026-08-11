@@ -110,6 +110,10 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -117,6 +121,7 @@
     background-image: var(--gradient-paper);
     background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
   h1,
@@ -188,6 +193,26 @@
 
 @utility glow-gold {
   animation: glow-pulse 5s ease-in-out infinite;
+}
+
+@utility glow-text {
+  text-shadow: 0 0 10px rgba(255, 229, 153, 0.55), 0 0 20px rgba(255, 227, 126, 0.25);
+}
+
+@utility text-fade-up {
+  animation: fade-up 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@utility text-fade-up-delayed {
+  animation: fade-up 1100ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@utility soft-float {
+  animation: float-y 5.2s ease-in-out infinite;
+}
+
+@utility heart-beat {
+  animation: heartbeat 1.25s ease-in-out infinite;
 }
 
 @utility lamp-swing {
@@ -323,6 +348,36 @@
   }
 }
 
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.08);
+  }
+  40% {
+    transform: scale(1.02);
+  }
+  60% {
+    transform: scale(1.12);
+  }
+  80% {
+    transform: scale(1.04);
+  }
+}
+
 @utility petal {
   position: absolute;
   top: -6vh;
@@ -350,6 +405,12 @@
   opacity: 0;
   animation: sparkle-rise linear infinite;
   will-change: transform;
+}
+
+@media (max-width: 640px) {
+  body {
+    background-attachment: scroll;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

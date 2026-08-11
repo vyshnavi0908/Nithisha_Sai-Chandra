@@ -21,18 +21,18 @@ export function Countdown() {
   }, []);
 
   return (
-    <div className="mx-auto grid w-full max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 lg:gap-6">
+    <div className="mx-auto grid w-full max-w-4xl grid-cols-2 gap-2.5 sm:grid-cols-4 sm:gap-4 lg:gap-6">
       {Object.entries(t).map(([label, value], i) => (
         <div
           key={label}
-          className="glow-gold relative flex min-h-[7.25rem] flex-col items-center justify-center rounded-[1.75rem] border border-accent/60 bg-card/85 px-3 py-4 shadow-[0_10px_35px_rgba(155,107,29,0.12)] sm:min-h-[8.25rem]"
+          className="glow-gold relative flex min-h-[5.6rem] flex-col items-center justify-center rounded-[1rem] border border-accent/60 bg-card/85 px-2 py-2.5 shadow-[0_10px_35px_rgba(155,107,29,0.12)] sm:min-h-[8.25rem] sm:rounded-[1.75rem] sm:px-3 sm:py-4"
           style={{ animationDelay: `${i * 0.5}s` }}
         >
           <span className="absolute inset-1.5 rounded-[1.4rem] border border-dashed border-accent/40" />
-          <span className="font-display text-3xl text-gold sm:text-4xl lg:text-5xl">
+          <span className="font-display text-[1.6rem] text-gold sm:text-4xl lg:text-5xl">
             {String(value).padStart(2, "0")}
           </span>
-          <span className="mt-2 font-body text-[0.55rem] tracking-[0.34em] text-primary/70 uppercase sm:text-[0.6rem]">
+          <span className="mt-1 font-body text-[0.45rem] tracking-[0.24em] text-primary/70 uppercase sm:mt-2 sm:text-[0.6rem] sm:tracking-[0.34em]">
             {label}
           </span>
         </div>
