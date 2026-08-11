@@ -18,11 +18,14 @@ import arch from "@/assets/arch.png";
 import mandala from "@/assets/mandala.png";
 import lotus from "@/assets/lotus.png";
 import g1 from "@/assets/g1.jpg";
-import g2 from "@/assets/g2.jpg";
 import g3 from "@/assets/g3.jpg";
 import g4 from "@/assets/g4.jpg";
 import g5 from "@/assets/g5.jpg";
 import g6 from "@/assets/g6.jpg";
+import bride from "@/assets/bride.jpeg";
+import groom from "@/assets/groom.jpeg";
+import mehandiCone from "@/assets/mehandi-cone.jpg";
+import subhMuhurtam from "@/assets/subh-muhurtham.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -52,7 +55,7 @@ const events = [
     date: "13th Aug 2026",
     time: "",
     note: "A joyful gathering of family and festive henna traditions.",
-    image: g2,
+    image: mehandiCone,
   },
   {
     name: "Haldi, Nalugu",
@@ -66,19 +69,19 @@ const events = [
     date: "16th Aug 2026",
     time: "7:00 PM onwards",
     note: "Blessings and dinner at Sri Balaji Kalyana Mandapam.",
-    image: g3,
+    image: g5,
   },
   {
     name: "Subh Muhurtham",
     date: "17th Aug 2026",
     time: "12:21 AM to 12:33 AM",
     note: "The auspicious wedding ceremony. Your presence is our blessing.",
-    image: g5,
+    image: subhMuhurtam,
   },
 ];
 
 
-const gallery = [g1, g6, g2, g4, g3, g5];
+const gallery = [g1, g6, g4, g4, g3, g5];
 
 const family = [
   { side: "Bride's Family", house: "Chintala", members: ["Mrs. Chintala Reddy Prasanna", "Mr. Chintala Nagarjuna Rao"], place: "Chilamathur, Garladinne Mandal" },
@@ -126,7 +129,7 @@ function Invitation() {
             </Reveal>
 
             <Reveal delay={300} className="mt-2 sm:mt-3">
-              <p className="font-lora text-[0.7rem] tracking-[0.4em] text-primary/70 uppercase sm:text-xs">
+              <p className="font-lora text-[0.7rem] tracking-[0.4em] text-primary/70 uppercase glow-detail sm:text-xs">
                 Together with their families
               </p>
               <h1 className="text-fade-up mt-1 font-script text-[2rem] leading-[1.02] text-gold glow-text glow-gold sm:mt-2 sm:text-7xl lg:text-8xl">
@@ -134,21 +137,21 @@ function Invitation() {
               </h1>
               <span className="my-1.5 inline-flex items-center gap-3 sm:my-2">
                 <span className="rule-gold h-px w-10 sm:w-20" />
-                <Heart className="h-5 w-5 fill-primary text-primary" />
+                <span className="heart-beat inline-flex items-center text-[2.4rem] sm:text-[3.5rem] text-primary glow-gold">❤️</span>
                 <span className="rule-gold h-px w-10 sm:w-20" />
               </span>
               <h1 className="text-fade-up-delayed font-script text-[2rem] leading-[1.02] text-gold glow-text glow-gold sm:text-7xl lg:text-8xl">
                 Sai Chand
               </h1>
 
-              <p className="mt-3 font-display text-[0.74rem] tracking-[0.24em] text-primary uppercase sm:mt-4 sm:text-lg sm:tracking-[0.32em]">
+              <p className="mt-3 font-display text-[0.74rem] tracking-[0.24em] text-primary uppercase glow-detail sm:mt-4 sm:text-lg sm:tracking-[0.32em]">
                 Monday · 17 August 2026
               </p>
-              <p className="mt-0.5 font-body text-[0.65rem] tracking-[0.18em] text-muted-foreground uppercase sm:text-xs sm:tracking-[0.2em]">
+              <p className="mt-0.5 font-body text-[0.65rem] tracking-[0.18em] text-primary/80 uppercase glow-detail sm:text-xs sm:tracking-[0.2em]">
                 Muhurtham 12:21 AM – 12:33 AM
               </p>
 
-              <p className="mx-auto mt-3 max-w-xl px-2 font-lora text-sm italic leading-relaxed text-brown/90 sm:mt-4 sm:px-0 sm:text-base">
+              <p className="mx-auto mt-3 max-w-xl px-2 font-lora text-sm italic leading-relaxed text-brown/90 glow-detail sm:mt-4 sm:px-0 sm:text-base">
                 “Two lamps, one flame. Two families, one blessing. May this bond, lit before the
                 gods, burn gently for a hundred years.”
               </p>
@@ -202,7 +205,7 @@ function Invitation() {
             {
               role: "The Bride",
               name: "Nithisha",
-              img: "https://image.shutterstock.com/image-vector/illustration-indian-wedding-couple-holding-260nw-2467296049.jpg",
+              img: bride,
               parents: family[0]!.members,
               place: "Chilamathur, Garladinne Mandal",
               note: "Daughter of the Chintala family — gentle, radiant and devoted, with a smile that lights every festival at home.",
@@ -210,7 +213,7 @@ function Invitation() {
             {
               role: "The Groom",
               name: "Sai Chand",
-              img: g6,
+              img: groom,
               parents: family[1]!.members,
               place: "Garladinne Mandal",
               note: "Son of the Koppolu family — warm-hearted and steadfast, raised on tradition and the values of his elders.",
@@ -243,13 +246,13 @@ function Invitation() {
                 <p className="mt-2 font-body text-[0.75rem] tracking-[0.36em] text-primary/70 uppercase">
                   {p.role}
                 </p>
-                <p className="mx-auto mt-4 max-w-xs font-lora text-sm text-brown sm:text-base">
+                <p className="mx-auto mt-4 max-w-xs font-lora text-sm text-brown sm:text-base glow-detail">
                   {p.note}
                 </p>
-                <p className="mt-5 font-body text-[0.65rem] tracking-[0.24em] text-muted-foreground uppercase">
+                <p className="mt-5 font-body text-[0.65rem] tracking-[0.24em] text-primary uppercase glow-detail">
                   {p.place}
                 </p>
-                <p className="mx-auto mt-4 max-w-xs font-lora text-sm italic leading-relaxed text-brown/85">
+                <p className="mx-auto mt-4 max-w-xs font-lora text-sm italic leading-relaxed text-brown/85 glow-detail">
                   {p.parents[0]}
                   <br />
                   {p.parents[1]}
@@ -268,16 +271,16 @@ function Invitation() {
           {events.map((ev, i) => (
             <Reveal key={ev.name} delay={i * 110}>
               <article
-                className="card-invite paper-grain group relative h-full overflow-hidden px-4 py-8 text-center transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(155,107,29,0.16)] sm:px-6 sm:py-10"
+                className="card-invite paper-grain group relative h-full overflow-hidden px-4 py-8 text-center transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(155,107,29,0.18)] sm:px-6 sm:py-10"
                 style={{
-                  backgroundColor: "rgba(255,255,255,0.9)",
-                  backgroundImage: `url(${ev.image})`,
-                  backgroundBlendMode: "screen",
+                  backgroundImage: `linear-gradient(rgba(255,255,255,0.96), rgba(255,255,255,0.96)), url(${ev.image})`,
+                  backgroundBlendMode: "lighten",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
+                  filter: "brightness(1.1) saturate(1.08)",
                 }}
               >
-                <div className="pointer-events-none absolute inset-0 bg-slate-50/90" />
+                <div className="pointer-events-none absolute inset-0 bg-white/85" />
                 <img
                   src={ev.image}
                   alt=""
@@ -285,7 +288,7 @@ function Invitation() {
                   width={1024}
                   height={1024}
                   loading="lazy"
-                  className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-30"
+                  className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-24 blur-[0.3px]"
                 />
                 <img
                   src={lotus}
@@ -315,15 +318,15 @@ function Invitation() {
                     loading="lazy"
                     className="mx-auto w-14 opacity-80"
                   />
-                  <h3 className="mt-4 font-script text-[1.8rem] text-amber-950 sm:text-3xl">{ev.name}</h3>
+                  <h3 className="mt-4 font-script text-[1.8rem] text-primary glow-strong sm:text-3xl">{ev.name}</h3>
                   <Divider />
-                  <p className="font-body text-[0.62rem] tracking-[0.28em] text-slate-900 uppercase">
+                  <p className="font-body text-[0.62rem] tracking-[0.28em] text-primary uppercase glow-detail">
                     {ev.date}
                   </p>
-                  <p className="mt-2 font-display text-sm tracking-[0.22em] text-slate-800">
+                  <p className="mt-2 font-display text-sm tracking-[0.22em] text-primary glow-detail">
                     {ev.time}
                   </p>
-                  <p className="mt-5 font-lora text-sm italic leading-relaxed text-slate-900/95">
+                  <p className="mt-5 font-lora text-sm italic leading-relaxed text-primary glow-detail">
                     {ev.note}
                   </p>
                 </div>
@@ -367,7 +370,7 @@ function Invitation() {
             />
           </Reveal>
           <Reveal delay={140} className="text-center lg:text-left">
-            <p className="font-lora text-base leading-relaxed text-brown">
+            <p className="font-lora text-base leading-relaxed text-brown glow-detail">
               Sri Balaji Kalyana Mandapam
               <br />
               Near Ayyappa Swamy Temple
@@ -378,21 +381,21 @@ function Invitation() {
             </p>
             <div className="mt-6 flex items-center justify-center gap-2 lg:justify-start">
               <MapPin className="h-4 w-4 text-accent-foreground" />
-              <span className="font-body text-[0.6rem] tracking-[0.3em] text-primary/70 uppercase">
+              <span className="font-body text-[0.6rem] tracking-[0.3em] text-primary uppercase glow-detail">
                 Reception 16 Aug · Muhurtham 17 Aug
               </span>
             </div>
             <div className="card-invite mt-8 overflow-hidden p-2">
               <iframe
                 title="Map to Sri Balaji Kalyana Mandapam, Tiruchanoor"
-                src="https://www.google.com/maps?q=Tiruchanoor%2C%20Andhra%20Pradesh%20517503&output=embed"
+                src="https://www.google.com/maps?q=UwYYVfuR8AZ4kY8x7&output=embed"
                 loading="lazy"
                 className="h-56 w-full sm:h-64"
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
             <a
-              href="https://www.google.com/maps/dir/?api=1&destination=Sri+Balaji+Kalyana+Mandapam+Tiruchanoor+517503"
+              href="https://maps.app.goo.gl/UwYYVfuR8AZ4kY8x7"
               target="_blank"
               rel="noreferrer"
               className="glow-gold mt-8 inline-flex items-center gap-3 border border-accent bg-primary px-7 py-3.5 font-display text-[0.58rem] tracking-[0.36em] text-primary-foreground uppercase"

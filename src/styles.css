@@ -196,7 +196,16 @@
 }
 
 @utility glow-text {
-  text-shadow: 0 0 10px rgba(255, 229, 153, 0.55), 0 0 20px rgba(255, 227, 126, 0.25);
+  text-shadow: 0 0 16px rgba(255, 229, 153, 0.75), 0 0 24px rgba(255, 227, 126, 0.35);
+}
+
+@utility glow-strong {
+  text-shadow: 0 0 26px rgba(255, 236, 120, 0.95), 0 0 48px rgba(255, 218, 96, 0.35);
+}
+
+@utility glow-detail {
+  color: var(--foreground);
+  text-shadow: 0 0 18px rgba(255, 245, 210, 0.55), 0 0 32px rgba(255, 228, 150, 0.28);
 }
 
 @utility text-fade-up {
