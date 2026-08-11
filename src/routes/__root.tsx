@@ -85,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "With the blessings of our families, Nithisha weds Sai Chand. Reception 16 August, Marriage 17 August 2026 at Sri Balaji Kalyana Mandapam, Tiruchanoor.",
       },
-      { name: "author", content: "Chintala & Koppolu Families" },
+      { name: "author", content: "Chintham & Koppolu Families" },
       { property: "og:title", content: "Nithisha & Sai Chand · Wedding Invitation | 17 Aug 2026" },
       {
         property: "og:description",

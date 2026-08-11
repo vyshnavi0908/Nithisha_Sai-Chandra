@@ -81,10 +81,10 @@ const events = [
 ];
 
 
-const gallery = [g1, g6, g4, g4, g3, g5];
+const gallery = [g1, g6, g4, g3, g5];
 
 const family = [
-  { side: "Bride's Family", house: "Chintala", members: ["Mrs. Chintala Reddy Prasanna", "Mr. Chintala Nagarjuna Rao"], place: "Chilamathur, Garladinne Mandal" },
+  { side: "Bride's Family", house: "Chintham", members: ["Mrs. Chintham Reddy Prasanna", "Mr. Chintham Nagarjuna Rao"], place: "Chilamathur, Garladinne Mandal" },
   { side: "Groom's Family", house: "Koppolu", members: ["Mrs. Koppolu Sujatha", "Mr. Koppolu Balaji"], place: "Garladinne Mandal" },
 ];
 
@@ -97,7 +97,7 @@ function Invitation() {
 
       {/* ------------------------------ HERO ------------------------------ */}
       <section id="home" className="relative px-2 pb-4 pt-2 sm:px-6 sm:pb-10 sm:pt-3">
-        <div className="frame-page paper-grain relative mx-auto max-w-6xl overflow-hidden bg-card/70 px-3 pb-10 pt-14 text-center sm:px-8 sm:pb-16 sm:pt-20">
+        <div className="paper-grain relative mx-auto max-w-6xl overflow-hidden bg-card/70 px-3 pb-10 pt-14 text-center sm:px-8 sm:pb-16 sm:pt-20">
           <MandalaWash />
           <HangingLamps className="px-2 sm:px-8" />
           <LotusCorners />
@@ -208,7 +208,7 @@ function Invitation() {
               img: bride,
               parents: family[0]!.members,
               place: "Chilamathur, Garladinne Mandal",
-              note: "Daughter of the Chintala family — gentle, radiant and devoted, with a smile that lights every festival at home.",
+              note: "Daughter of the Chintham family — gentle, radiant and devoted, with a smile that lights every festival at home.",
             },
             {
               role: "The Groom",
@@ -436,16 +436,16 @@ function Invitation() {
  
       {/* ------------------------------ FOOTER ------------------------------ */}
       <footer className="relative px-2 pb-8 sm:px-6 sm:pb-10">
-        <div className="frame-page paper-grain relative mx-auto max-w-6xl overflow-hidden bg-card/70 px-4 py-10 text-center sm:px-6 sm:py-14">
+        <div className="relative mx-auto max-w-6xl px-4 py-10 text-center sm:px-6 sm:py-14">
           <MandalaWash />
           <LotusCorners />
           <div className="relative z-10">
             <span className="flame-flicker inline-block font-display text-4xl text-gold sm:text-5xl">ॐ</span>
-            <h2 className="mt-4 flex flex-wrap items-center justify-center gap-2 font-script text-[1.5rem] text-gold glow-gold sm:mt-6 sm:gap-3 sm:text-6xl">
+            <p className="mt-4 flex flex-wrap items-center justify-center gap-2 font-script text-[1.5rem] text-gold sm:mt-6 sm:gap-3 sm:text-6xl">
               <span className="whitespace-nowrap">Nithisha</span>
               <span className="heart-beat inline-flex items-center text-primary glow-gold">❤️</span>
               <span className="whitespace-nowrap">Sai Chand</span>
-            </h2>
+            </p>
             <Divider label="Thank You" />
             <p className="mx-auto max-w-lg font-lora text-sm italic leading-relaxed text-brown/85">
               Your blessings are the truest ornament of this wedding. We await you at Tiruchanoor.
